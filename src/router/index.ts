@@ -18,6 +18,11 @@ const routes: RouteConfig[] = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
+  {
+    path: '/formCreate',
+    name: 'DynamicTable',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DynamicTable.vue'),
+  },
 ];
 
 const router = new VueRouter({

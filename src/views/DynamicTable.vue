@@ -1,21 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <upload></upload>
   </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import HelloWorld from '@/components/HelloWorld.vue';
-
+    import Upload from '@/components/formCreate/Upload.vue';
 
     @Component({
         components: {
-            HelloWorld,
+            Upload,
         },
     })
-    export default class Home extends Vue {
+    export default class DynamicTable extends Vue {
         @Prop() private msg!: string;
     }
 </script>
