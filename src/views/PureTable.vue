@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <upload></upload>
+    <p-upload></p-upload>
   </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Upload from '@/components/formCreate/FcUpload.vue';
+    import PUpload from '@/components/pure/PUpload';
 
     @Component({
         components: {
-            Upload,
+            PUpload,
         },
     })
-    export default class DynamicTable extends Vue {
-        @Prop() private msg!: string;
+    export default class PureTable extends Vue {
+
     }
 </script>
