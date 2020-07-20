@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/pureTable">纯前端</router-link> |
       <router-link to="/formCreate">动态表单</router-link> |
+      <router-link to="/eLDTable">El表单</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>

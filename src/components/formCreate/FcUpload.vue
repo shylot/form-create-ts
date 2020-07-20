@@ -21,7 +21,7 @@
                 props: {
                     type: 'select',
                     uploadType: 'image',
-                    action: 'D:',
+                    action: '',
                     name: 'pic',
                     multiple: true,
                     accept: 'image\/*',

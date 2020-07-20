@@ -28,6 +28,11 @@ const routes: RouteConfig[] = [
         name: 'PureTable',
         component: () => import(/* webpackChunkName: "about" */ '../views/PureTable.vue'),
     },
+    {
+        path: '/eLDTable',
+        name: 'ELDTable',
+        component: () => import(/* webpackChunkName: "about" */ '../views/ELDTable.vue'),
+    },
 ];
 
 const router = new VueRouter({

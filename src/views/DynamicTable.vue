@@ -1,16 +1,19 @@
 <template>
   <div class="home">
-    <upload></upload>
+    <fc-upload></fc-upload>
+    <fc-group></fc-group>
   </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Upload from '@/components/formCreate/FcUpload.vue';
+    import FcUpload from '@/components/formCreate/FcUpload.vue';
+    import FcGroup from '@/components/formCreate/FcGroup.vue';
 
     @Component({
         components: {
-            Upload,
+            FcGroup,
+            FcUpload,
         },
     })
     export default class DynamicTable extends Vue {
