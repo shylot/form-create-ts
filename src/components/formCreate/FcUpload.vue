@@ -15,17 +15,18 @@
                 field: 'pic',
                 title: '轮播图',
                 value: [
-                    'http://img1.touxiang.cn/uploads/20131030/30-075657_191.jpg',
+                    '/upload/pic/尔雅.jpeg',
                     'http://img1.touxiang.cn/uploads/20131030/30-075657_191.jpg',
                 ],
                 props: {
                     type: 'select',
                     uploadType: 'image',
-                    action: '',
+                    action: '/local/pic/',
+                    'auto-upload': false,
                     name: 'pic',
                     multiple: true,
                     accept: 'image\/*',
-                    limit: 2,
+                    // limit: 2,
                     onSuccess(res: any, file: any) {
                         file.url = res.data.filePath;
                     },

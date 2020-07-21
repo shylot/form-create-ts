@@ -2,7 +2,8 @@
     <!--action="https://jsonplaceholder.typicode.com/posts/"-->
     <el-upload
             class="upload-demo"
-            action="localhost:8080/dist"
+            :auto-upload="false"
+            action="/el/posts/"
             :on-preview="handlePreview"
             :on-remove="handleRemove"
             :before-remove="beforeRemove"
