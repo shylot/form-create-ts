@@ -1,9 +1,9 @@
 <template>
     <div>
-        <el-upload
+        <el-upload action=""
                 class="picture-card"
-                action="/el/posts/"
                 list-type="picture-card"
+                :http-request="uploadFile"
                 :on-preview="handlePictureCardPreview"
                 :on-remove="handleRemove">
             <i class="el-icon-plus"></i>
@@ -22,7 +22,11 @@
         private dialogImageUrl: string = '';
         private dialogVisible: boolean = false;
 
-        private handleRemove(file, fileList) {
+        private uploadFile(file: any) {
+            file.onSuccess();
+        }
+
+        private handleRemove(file: any, fileList: any) {
             console.log(file, fileList);
         }
 
