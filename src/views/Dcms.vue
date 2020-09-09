@@ -92,6 +92,49 @@
                 value: 0,
             },
             {
+                field: 'eco_ecologyarea_p@disasterType',
+                title: '灾害区类型',
+                type: 'fcTreeSelect',
+                groupAlias: '基本信息',
+                groupName: 'per_fireteam_p',
+                validate: {
+                    required: false,
+                },
+                options: [],
+                props: {
+                    type: 'text',
+                    placeholder: '请输入',
+                    multiple: true,
+                    options: [
+                        {
+                            label: '常用',
+                            id: '1',
+                            children: [
+                                {label: '水旱灾害风险区', id: '11'},
+                                {label: '气象灾害风险区', id: '12'},
+                                {label: '地质灾害风险区', id: '13'},
+                            ],
+                        },
+                        {
+                            label: '全部',
+                            id: '2',
+                            children: [
+                                {
+                                    label: '水旱灾害风险区',
+                                    id: '21',
+                                    children: [
+                                        {label: '洪泛区', id: '211'},
+                                        {label: '蓄滞洪区', id: '212'},
+                                        {label: '防洪保护区', id: '213'},
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                value: null,
+            },
+            {
                 field: 'per_forestfireteam_p@defaulttime',
                 title: '填报时间',
                 type: 'datePicker',
@@ -107,49 +150,6 @@
                     type: 'datetime',
                 },
                 value: '',
-            },
-            {
-                field: 'eco_ecologyarea_p@disasterType',
-                title: '灾害区类型',
-                type: 'fcTabTreeSelect',
-                groupAlias: '基本信息',
-                groupName: 'per_fireteam_p',
-                validate: {
-                    required: false,
-                },
-                options: [],
-                props: {
-                    type: 'text',
-                    placeholder: '请输入',
-                    format: null,
-                    datas: [
-                        {
-                            label: '常用',
-                            value: '',
-                            children: [
-                                {label: '水旱灾害风险区', value: '100101000000'},
-                                {label: '气象灾害风险区', value: '100101000001'},
-                                {label: '地质灾害风险区', value: '100101000002'},
-                            ],
-                        },
-                        {
-                            label: '全部',
-                            value: '',
-                            children: [
-                                {
-                                    label: '水旱灾害风险区',
-                                    value: '100101000000',
-                                    children: [
-                                        {label: '洪泛区', value: '100101010000'},
-                                        {label: '蓄滞洪区', value: '100101020000'},
-                                        {label: '防洪保护区', value: '100101030000'},
-                                    ],
-                                },
-                            ],
-                        },
-                    ],
-                },
-                value: null,
             },
         ];
 
