@@ -76,7 +76,7 @@ export class HttpImpl implements IHttp {
         return this.send('delete', url, data, responseType, contentType);
     }
 
-    send(type: string, url: string, data?: any, responseType?: any, contentType?: any): any {
+    public send(type: string, url: string, data?: any, responseType?: any, contentType?: any): any {
         let newUrl: string = '';
         if (url.indexOf('?') > 0) { // 带参数get请求
             newUrl = newUrl.split('?')[0];

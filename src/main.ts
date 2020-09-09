@@ -15,8 +15,17 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 /*
  * 引入form-create
  **********************/
-import formCreate from '@form-create/element-ui';
-Vue.use(formCreate);
+/*import formCreate from '@form-create/element-ui';
+Vue.use(formCreate);*/
+
+/*
+ * 引入dcms
+ **********************/
+import DcmsUI from 'dcms-ui';
+import 'dcms-ui/lib/css/theme-default/index.css';
+Vue.use(DcmsUI);
+
+
 
 new Vue({
   router,

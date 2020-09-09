@@ -27,10 +27,10 @@
         }
 
         private handleRemove(file: any, fileList: any) {
-            console.log(file, fileList);
+            const newFile: any = file;
         }
 
-        private handlePictureCardPreview(file) {
+        private handlePictureCardPreview(file: any) {
             this.dialogImageUrl = file.url;
             this.dialogVisible = true;
         }
