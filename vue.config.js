@@ -2,7 +2,10 @@
  *
  *  配置前端代理，以及开发环境配置
  */
+const baseUrl = process.env.NODE_ENV === 'production' ? '/dist' : '/';
+
 module.exports = {
+    publicPath: baseUrl,
     devServer: {
         host: 'localhost',
         port: 8081,
