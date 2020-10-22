@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <fc-pop-info></fc-pop-info>
+    <fc-pop-info ref="dom"></fc-pop-info>
     <!--<fc-upload></fc-upload>-->
     <!--<fc-group></fc-group>-->
   </div>
@@ -21,5 +21,12 @@
     })
     export default class DynamicTable extends Vue {
         @Prop() private msg!: string;
+
+        private mounted() {
+            const dom: any = this.$refs.dom;
+            /*this.$nextTick(() => {
+                dom.fApi.disabled(true);
+            })*/
+        }
     }
 </script>

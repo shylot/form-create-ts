@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter, {RouteConfig} from 'vue-router';
 import Home from '../views/Home.vue';
 import Dcms from '../views/Dcms.vue';
+import GvComp from '../views/GvComp.vue';
 
 Vue.use(VueRouter);
 
@@ -19,11 +20,11 @@ const routes: RouteConfig[] = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     },
-    /*{
+    {
         path: '/formCreate',
         name: 'DynamicTable',
-        component: () => import(/!* webpackChunkName: "about" *!/ '../views/DynamicTable.vue'),
-    },*/
+        component: () => import(/* webpackChunkName: "about" */ '../views/DynamicTable.vue'),
+    },
     {
         path: '/pureTable',
         name: 'PureTable',
@@ -39,8 +40,12 @@ const routes: RouteConfig[] = [
         name: 'Dcms',
         component: Dcms,
     },
+    {
+        path: '/gvComp',
+        name: 'GvComp',
+        component: GvComp,
+    },
 ];
-
 const router = new VueRouter({
     routes,
 });

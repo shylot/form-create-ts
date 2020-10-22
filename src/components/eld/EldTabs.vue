@@ -2,7 +2,8 @@
     <el-tabs type="card">
         <el-tab-pane v-for="tab in tabsData"
                      :name="tab.name"
-                     :label="tab.label">
+                     :label="tab.label"
+                     :key="tab.label">
         </el-tab-pane>
     </el-tabs>
 </template>

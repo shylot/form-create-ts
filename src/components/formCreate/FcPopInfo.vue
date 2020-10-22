@@ -1,6 +1,11 @@
 <template>
     <!--分组-->
-    <form-create v-model="fApi" :rule="rule" :option="option" class="dynamic_form__content"></form-create>
+    <form-create class="dynamic_form__content"
+                 @bType-blur="blurForm"
+                 @change="change"
+                 v-model="fApi"
+                 :rule="rule"
+                 :option="option"></form-create>
 </template>
 
 <script lang="ts">
@@ -10,6 +15,7 @@
     export default class FcPopInfo extends Vue {
         private fApi: any = {};
         private option: any = {
+            injectEvent: true,
             form: {
                 // 'labelPosition': 'top',
                 statusIcon: true,
@@ -71,6 +77,8 @@
                 title: '测试',
                 field: 'test',
                 value: 29,
+                emit: ['blur'],
+                emitPrefix: 'bType',
                 validate: {
                     required: true,
                 },
@@ -85,7 +93,51 @@
                     type: 'number',
                 },
             },
+            {
+                type: 'cascader',
+                title: '多级联动',
+                field: 'cascader',
+                emit: ['blur'],
+                emitPrefix: 'bType',
+                value: ['apple', 'computer', 'cpu'],
+                // value: 'cpu',
+                props: {
+                    'options': [
+                        {
+                            label: '苹果',
+                            value: 'apple',
+                            children: [
+                                {label: '手机', value: 'phone'},
+                                {label: '平板', value: 'pad'},
+                                {
+                                    label: '电脑',
+                                    value: 'computer',
+                                    children: [
+                                        {label: '内核', value: 'cpu'},
+                                        {label: '鼠标', value: 'mouse'},
+                                        {label: '键盘', value: 'keyboard'},
+                                        {label: '存储器', value: 'storage'},
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                    'show-all-levels': false,
+                    'props': {
+                        checkStrictly: true,
+                    },
+                },
+            },
         ];
+
+        private blurForm(inject: any) {
+            const value: any = inject.self.value;
+            console.log(value);
+        }
+
+        private change(a: any, b: any, c: any) {
+            console.log(a, b, c);
+        }
     }
 </script>
 
