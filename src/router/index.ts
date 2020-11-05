@@ -3,6 +3,7 @@ import VueRouter, {RouteConfig} from 'vue-router';
 import Home from '../views/Home.vue';
 import Dcms from '../views/Dcms.vue';
 import GvComp from '../views/GvComp.vue';
+import TreeSelect from '../views/TreeSelect.vue';
 
 Vue.use(VueRouter);
 
@@ -44,6 +45,11 @@ const routes: RouteConfig[] = [
         path: '/gvComp',
         name: 'GvComp',
         component: GvComp,
+    },
+    {
+        path: '/treeSelect',
+        name: 'TreeSelect',
+        component: TreeSelect,
     },
 ];
 const router = new VueRouter({

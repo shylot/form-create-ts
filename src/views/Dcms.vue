@@ -103,6 +103,7 @@
                 options: [],
                 props: {
                     type: 'text',
+                    showLabelText: true,
                     placeholder: '请输入',
                     multiple: true,
                     options: [

@@ -84,6 +84,15 @@
                 },
             },
             {
+                type: 'datePicker',
+                title: '日期选择器',
+                field: 'datePicker',
+                value: '2020-12-02',
+                props: {
+                    type: 'datetime',
+                },
+            },
+            {
                 type: 'inputNumber',
                 title: '数量',
                 field: 'num',
@@ -132,11 +141,11 @@
 
         private blurForm(inject: any) {
             const value: any = inject.self.value;
-            console.log(value);
+            // console.log(value);
         }
 
         private change(a: any, b: any, c: any) {
-            console.log(a, b, c);
+            // console.log(a, b, c);
         }
     }
 </script>

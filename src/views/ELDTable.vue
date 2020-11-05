@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <EldSelect></EldSelect>
     <!--<eld-upload></eld-upload>-->
     <el-input v-model="input"></el-input>
     <el-input-number v-model="number"></el-input-number>
@@ -13,6 +14,7 @@
     import EldUpload from '@/components/eld/EldUpload.vue';
     import EldUploadPic from '@/components/eld/EldUploadPic.vue';
     import EldTabs from '@/components/eld/EldTabs.vue';
+    import EldSelect from '@/components/eld/EldSelect.vue';
 
 
     @Component({
@@ -20,6 +22,7 @@
             EldTabs,
             EldUploadPic,
             EldUpload,
+            EldSelect,
         },
     })
     export default class ELDTable extends Vue {

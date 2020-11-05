@@ -21,10 +21,10 @@ Vue.use(formCreate);
 /*
  * 引入dcms
  **********************/
-/*import DcmsUI from 'dcms-ui';
+import DcmsUI from 'dcms-ui';
 import 'dcms-ui/lib/css/theme-default/index.css';
 import 'dcms-ui/lib/dcms-ui.css';
-Vue.use(DcmsUI);*/
+Vue.use(DcmsUI);
 
 
 
