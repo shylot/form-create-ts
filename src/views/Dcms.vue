@@ -1,28 +1,51 @@
 <template>
     <div class="dcms">
-        <!--<DynamicTable
+        <h3>下拉树选择 - FcTreeSelect</h3>
+        <FcTreeSelect :options="options"></FcTreeSelect>
+        <br/>
+
+        <h3>日期限制 - FcDatePickerLimit</h3>
+        <FcDatePickerLimit :limitDate="limitDate"></FcDatePickerLimit>
+        <br/>
+
+        <h3>下拉下拉树组件 - FcTabTreeSelect</h3>
+        <FcTabTreeSelect :datas="datas"></FcTabTreeSelect>
+        <br/>
+
+        <!--<h3>动态表单 - DynamicTable</h3>
+        <DynamicTable
                 ref="dynamicTable"
                 :formRule="formRule"
                 :layoutType="layoutType"
                 :cols="cols"
                 @changeForm="changeForm">
-        </DynamicTable>-->
-        <FcTreeSelect :options="options"></FcTreeSelect>
+        </DynamicTable>
+        <br/>-->
+
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
 
-    import {FcTreeSelect} from 'dcms-ui';
+    /*下拉选择树*/
+    import FcTreeSelect from 'dcms-ui/packages/fcTreeSelect';            // 组件按需加载
+    import 'dcms-ui/lib/css/theme-default/fcTreeSelect.css';             // 样式按需加载
+    /*日期限制*/
+    import FcDatePickerLimit from 'dcms-ui/packages/fcDatePickerLimit';
+    /*下拉下拉树组件*/
+    import FcTabTreeSelect from 'dcms-ui/packages/fcTabTreeSelect';
+    import DynamicTable from 'dcms-ui/packages/dynamicTable';      // 组件按需加载
+    /*动态表单*/
+
 
     @Component({
-        components: {FcTreeSelect},
+        components: {DynamicTable, FcTabTreeSelect, FcTreeSelect, FcDatePickerLimit},
     })
     export default class Dcms extends Vue {
         @Prop() private msg!: string;
 
-        // fcTreeSelect
+        // FcTreeSelect
         private options: any = [
             {
                 label: '常用',
@@ -46,6 +69,38 @@
                             {label: '防洪保护区', id: '213'},
                         ],
                     },
+                ],
+            },
+        ];
+        // FcDatePickerLimit
+        private limitDate: string = '2020-11-08';
+        // FcTabTreeSelect
+        private datas: any = [
+            {
+                label: '常用',
+                value: '',
+                children: [
+                    {label: '苹果', value: 'apple'},
+                    {label: '三星', value: 'sun'},
+                    {label: '华为', value: 'huawei'},
+                ],
+            },
+            {
+                label: '全部',
+                value: '',
+                children: [
+                    {
+                        label: '电脑',
+                        value: 'computer',
+                        children: [
+                            {label: 'CPU', value: 'CPU'},
+                            {label: '显示器', value: 'view'},
+                            {label: '存储器', value: 'storage'},
+                            {label: '输入设备与输出设备', value: 'IO'},
+                        ],
+                    },
+                    {label: '平板', value: 'pad'},
+                    {label: '手机', value: 'phone'},
                 ],
             },
         ];
@@ -126,7 +181,7 @@
             {
                 field: 'eco_ecologyarea_p@disasterType',
                 title: '灾害区类型',
-                type: 'fcTreeSelect',
+                type: 'FcTreeSelect',
                 groupAlias: '基本信息',
                 groupName: 'per_fireteam_p',
                 validate: {
@@ -195,3 +250,6 @@
         }
     }
 </script>
+<style lang="less" scoped>
+
+</style>

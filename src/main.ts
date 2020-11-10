@@ -15,6 +15,8 @@ Vue.use(Element/*, { size: 'small', zIndex: 3000 }*/);
 /*
  * 引入form-create
  **********************/
+
+
 import formCreate from '@form-create/element-ui';
 Vue.use(formCreate);
 
