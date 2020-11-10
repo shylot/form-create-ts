@@ -27,7 +27,7 @@
             EldUploadPic,
             EldUpload,
             EldSelect,
-            EldTree
+            EldTree,
         },
     })
     export default class ELDTable extends Vue {

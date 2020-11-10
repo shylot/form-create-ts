@@ -33,8 +33,8 @@
     })
     export default class TreeSelectTitle extends Vue {
 
-        @Prop({default: true}) private showLabelTip: boolean;
-        @Prop({default: true}) private showValueTip: boolean;
+        @Prop({default: true}) private showLabelTip!: boolean;
+        @Prop({default: true}) private showValueTip!: boolean;
 
         private value: any = null;
 

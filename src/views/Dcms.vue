@@ -1,23 +1,55 @@
 <template>
     <div class="dcms">
-        <DynamicTable
+        <!--<DynamicTable
                 ref="dynamicTable"
                 :formRule="formRule"
                 :layoutType="layoutType"
                 :cols="cols"
                 @changeForm="changeForm">
-        </DynamicTable>
+        </DynamicTable>-->
+        <FcTreeSelect :options="options"></FcTreeSelect>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
 
+    import {FcTreeSelect} from 'dcms-ui';
+
     @Component({
-        components: {},
+        components: {FcTreeSelect},
     })
     export default class Dcms extends Vue {
         @Prop() private msg!: string;
+
+        // fcTreeSelect
+        private options: any = [
+            {
+                label: '常用',
+                id: '1',
+                children: [
+                    {label: '水旱灾害风险区', id: '11'},
+                    {label: '气象灾害风险区', id: '12'},
+                    {label: '地质灾害风险区', id: '13'},
+                ],
+            },
+            {
+                label: '全部',
+                id: '2',
+                children: [
+                    {
+                        label: '水旱灾害风险区',
+                        id: '21',
+                        children: [
+                            {label: '洪泛区', id: '211'},
+                            {label: '蓄滞洪区', id: '212'},
+                            {label: '防洪保护区', id: '213'},
+                        ],
+                    },
+                ],
+            },
+        ];
+
         private layoutType: number = 0;
         private cols: number = 2;
         private formRule: any[] = [
@@ -104,8 +136,6 @@
                 props: {
                     type: 'text',
                     showLabelText: true,
-
-
                     placeholder: '请输入',
                     multiple: true,
                     options: [

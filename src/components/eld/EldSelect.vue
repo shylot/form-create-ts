@@ -28,7 +28,8 @@
             {
                 label: '页签三',
                 value: 'three',
-            },{
+            },
+            {
                 label: '页签四',
                 value: 'four',
             },
