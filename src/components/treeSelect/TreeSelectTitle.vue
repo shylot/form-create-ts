@@ -2,6 +2,7 @@
     <treeselect
             :options="options"
             v-model="value"
+            :multiple="true"
             :searchable="false"
             :show-count="true"
             :default-expand-level="1"
@@ -50,6 +51,12 @@
             {id: 'b', label: 'VB'},
             {id: 'c', label: 'VC'},
         ];
+
+        private mounted() {
+            setTimeout(() => {
+                this.value = null;
+            }, 10000);
+        }
     }
 </script>
 
