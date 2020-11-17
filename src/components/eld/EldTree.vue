@@ -59,7 +59,7 @@
         };
 
         private handleNodeClick(a: any, b: any, c: any) {
-            console.log(a, b, c);
+           alert([a, b, c]);
         }
     }
 </script>

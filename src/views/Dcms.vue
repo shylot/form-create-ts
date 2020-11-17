@@ -1,15 +1,15 @@
 <template>
     <div class="dcms">
         <h3>下拉树选择 - FcTreeSelect</h3>
-        <FcTreeSelect :options="options"></FcTreeSelect>
+        <!--<FcTreeSelect :options="options"></FcTreeSelect>-->
         <br/>
 
         <h3>日期限制 - FcDatePickerLimit</h3>
-        <FcDatePickerLimit :limitDate="limitDate"></FcDatePickerLimit>
+        <!--<FcDatePickerLimit :limitDate="limitDate"></FcDatePickerLimit>-->
         <br/>
 
         <h3>下拉下拉树组件 - FcTabTreeSelect</h3>
-        <FcTabTreeSelect :datas="datas"></FcTabTreeSelect>
+        <!--<FcTabTreeSelect :datas="datas"></FcTabTreeSelect>-->
         <br/>
 
         <!--<h3>动态表单 - DynamicTable</h3>
@@ -29,18 +29,18 @@
     import {Component, Prop, Vue} from 'vue-property-decorator';
 
     /*下拉选择树*/
-    import FcTreeSelect from 'dcms-ui/packages/fcTreeSelect';            // 组件按需加载
-    import 'dcms-ui/lib/css/theme-default/fcTreeSelect.css';             // 样式按需加载
+    // import FcTreeSelect from 'dcms-ui/packages/fcTreeSelect';            // 组件按需加载
+    // import 'dcms-ui/lib/css/theme-default/fcTreeSelect.css';             // 样式按需加载
     /*日期限制*/
-    import FcDatePickerLimit from 'dcms-ui/packages/fcDatePickerLimit';
+    // import FcDatePickerLimit from 'dcms-ui/packages/fcDatePickerLimit';
     /*下拉下拉树组件*/
-    import FcTabTreeSelect from 'dcms-ui/packages/fcTabTreeSelect';
-    import DynamicTable from 'dcms-ui/packages/dynamicTable';      // 组件按需加载
+    // import FcTabTreeSelect from 'dcms-ui/packages/fcTabTreeSelect';
+    // import DynamicTable from 'dcms-ui/packages/dynamicTable';      // 组件按需加载
     /*动态表单*/
 
 
     @Component({
-        components: {DynamicTable, FcTabTreeSelect, FcTreeSelect, FcDatePickerLimit},
+        // components: {DynamicTable, FcTabTreeSelect, FcTreeSelect, FcDatePickerLimit},
     })
     export default class Dcms extends Vue {
         @Prop() private msg!: string;

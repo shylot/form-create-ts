@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div class="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/pureTable">纯前端</router-link> |
       <router-link to="/formCreate">动态表单</router-link> |
@@ -22,16 +22,19 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+</style>
+<style lang="less" scoped>
+  .nav {
+    padding: 30px;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
-}
 </style>

@@ -42,21 +42,21 @@
             }, 10000);
         }
 
-        private input(val) {
-            console.log('@input', val);
+        private input(val: any) {
+            alert(['@input', val]);
         }
 
-        private open(val) {
-            console.log('@open', val);
+        private open(val: any) {
+            alert(['@open', val]);
         }
-        private close(val) {
-            console.log('@close', val);
+        private close(val: any) {
+            alert(['@close', val]);
         }
-        private select(val) {
-            console.log('@select', val);
+        private select(val: any) {
+            alert(['@select', val]);
         }
-        private searchChange(val) {
-            console.log('@searchChange', val);
+        private searchChange(val: any) {
+            alert(['@searchChange', val]);
         }
     }
 </script>
