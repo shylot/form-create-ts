@@ -17,7 +17,7 @@
         private option: any = {
             injectEvent: true,
             form: {
-                'labelPosition': 'right',
+                labelPosition: 'right',
                 statusIcon: true,
             },
             info: {
