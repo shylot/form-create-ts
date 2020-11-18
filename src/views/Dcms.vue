@@ -12,7 +12,7 @@
         <!--<FcTabTreeSelect :datas="datas"></FcTabTreeSelect>-->
         <br/>
 
-        <!--<h3>动态表单 - DynamicTable</h3>
+        <h3>动态表单 - DynamicTable</h3>
         <DynamicTable
                 ref="dynamicTable"
                 :formRule="formRule"
@@ -20,7 +20,7 @@
                 :cols="cols"
                 @changeForm="changeForm">
         </DynamicTable>
-        <br/>-->
+        <br/>
 
     </div>
 </template>
@@ -125,6 +125,20 @@
                     format: null,
                 },
                 value: null,
+            },
+            {
+                type: 'radio',
+                title: '单选框',
+                field: 'radio',
+                options: [
+                    {label: '内核内核内核内核内核', value: 'cpu'},
+                    {label: '鼠标鼠标鼠标鼠标', value: 'mouse'},
+                    {label: '键盘键盘键盘键盘', value: 'keyboard'},
+                    {label: '存储器存储器存储器', value: 'storage'},
+                ],
+                props: {
+                    type: 'button',
+                },
             },
             {
                 field: 'eco_ecologyarea_p@typecode',

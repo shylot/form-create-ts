@@ -24,7 +24,7 @@ const routes: RouteConfig[] = [
     {
         path: '/formCreate',
         name: 'DynamicTable',
-        component: () => import(/* webpackChunkName: "about" */ '../views/FcDynamicTable.vue'),
+        component: () => import(/* webpackChunkName: "about" */ '../views/DynamicTable.vue'),
     },
     {
         path: '/pureTable',

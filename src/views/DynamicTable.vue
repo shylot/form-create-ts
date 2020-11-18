@@ -2,8 +2,9 @@
   <div class="home">
     <FcDynamicTable ref="dynamicTable"
                     :formRule="formRule"
-                    :layoutType="layoutType"
+                    layoutType="2"
                     :cols="cols"
+                    @blur="blur"
                     @changeForm="changeForm"></FcDynamicTable>
     <!--<fc-pop-info ref="dom"></fc-pop-info>-->
     <!--<fc-upload></fc-upload>-->
@@ -31,7 +32,8 @@
 
         private layoutType: number = 0;
         private cols: number = 2;
-        private formRule: any[] = [
+        private formRule: any[] = require('../../public/formTypeTest.json');
+            /*[
             {
                 field: 'eco_ecologyarea_p@name',
                 title: '名称',
@@ -49,6 +51,20 @@
                     format: null,
                 },
                 value: null,
+            },
+            {
+                type: 'radio',
+                title: '单选框',
+                field: 'radio',
+                options: [
+                    {label: '内核内核内核内核内核', value: 'cpu'},
+                    {label: '鼠标鼠标鼠标鼠标', value: 'mouse'},
+                    {label: '键盘键盘键盘键盘', value: 'keyboard'},
+                    {label: '存储器存储器存储器', value: 'storage'},
+                ],
+                props: {
+                    // type: 'button',
+                },
             },
             {
                 field: 'eco_ecologyarea_p@typecode',
@@ -119,7 +135,15 @@
                 },
                 value: '',
             },
-        ];
+        ];*/
+
+        private changeForm(data: any) {
+            // console.log(data);
+        }
+
+        private blur(data: any) {
+            console.log('blur', data);
+        }
 
         private mounted() {
             const dom: any = this.$refs.dom;

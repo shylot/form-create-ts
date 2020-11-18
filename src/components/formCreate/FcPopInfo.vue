@@ -17,7 +17,7 @@
         private option: any = {
             injectEvent: true,
             form: {
-                // 'labelPosition': 'top',
+                'labelPosition': 'right',
                 statusIcon: true,
             },
             info: {
@@ -78,16 +78,36 @@
                 field: 'test',
                 value: 29,
                 emit: ['blur'],
-                emitPrefix: 'bType',
-                validate: {
-                    required: true,
+                props: {
+                    maxlength: 6,
+                },
+                // emitPrefix: 'bType',
+                validate: [
+                    {required: true, message: '该字段必填'},
+                    {max: 5, message: '该字段长度不超过5'},
+                ],
+            },
+            {
+                type: 'radio',
+                title: '单选框',
+                field: 'radio',
+                options: [
+                    {label: '内核', value: 'cpu'},
+                    {label: '鼠标', value: 'mouse'},
+                    {label: '键盘', value: 'keyboard'},
+                    {label: '存储器', value: 'storage'},
+                ],
+                props: {
+                  type: 'button',
                 },
             },
             {
                 type: 'datePicker',
                 title: '日期选择器',
                 field: 'datePicker',
-                value: '2020-12-02',
+                emit: ['blur'],
+                // emitPrefix: 'bType',
+                value: '',
                 props: {
                     type: 'datetime',
                 },
@@ -96,6 +116,8 @@
                 type: 'inputNumber',
                 title: '数量',
                 field: 'num',
+                emit: ['blur'],
+                // emitPrefix: 'bType',
                 value: 1,
                 validate: {
                     max: 2,
@@ -107,7 +129,7 @@
                 title: '多级联动',
                 field: 'cascader',
                 emit: ['blur'],
-                emitPrefix: 'bType',
+                // emitPrefix: 'bType',
                 value: ['apple', 'computer', 'cpu'],
                 // value: 'cpu',
                 props: {
@@ -141,7 +163,7 @@
 
         private blurForm(inject: any) {
             const value: any = inject.self.value;
-            // console.log(value);
+            console.log(value);
         }
 
         private change(a: any, b: any, c: any) {

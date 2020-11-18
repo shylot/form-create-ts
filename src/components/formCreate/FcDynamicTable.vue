@@ -6,7 +6,7 @@
               :rule="rule"
               :option="option"
               @change="change"
-              @bType-blur="blur"
+              @blur="blur"
       ></form-create>
    </div>
 </template>
@@ -356,7 +356,7 @@
 
         // 表单值 -【失去焦点】触发
         private blur(inject: any) {
-            const data: any = {};
+            /*const data: any = {};
             const rule: any = inject.self;
             const field: string = rule.field;
             let value: any = inject.self.value;
@@ -372,7 +372,8 @@
             const bType: string = rule.bType;
             if (!!value && !!bType) {
                 this.changeRelate(bType, value);
-            }
+            }*/
+            this.$emit('blur', inject);
         }
 
         // 判断鼠标是否划过标题
@@ -541,9 +542,8 @@
          }
 
          & .el-form-item__content {
-            margin-left: 152px;
             & > div {
-               width: 100% !important;
+               width: 100%;
             }
          }
 
@@ -584,5 +584,9 @@
             padding: 2px;
          }
       }
+
+
+      /*单选框，复选框样式修改*/
+
    }
 </style>
