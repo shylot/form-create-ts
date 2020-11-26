@@ -6,7 +6,7 @@
               :rule="rule"
               :option="option"
               @change="change"
-              @blur="blur"
+              @change-blur="blur"
       ></form-create>
    </div>
 </template>
@@ -48,7 +48,7 @@
             },
 
             form: {
-                labelWidth: '152px',
+                labelWidth: '100px',
             },
 
             info: {
@@ -97,9 +97,10 @@
         private getRasterLayout(form: any) {
             const span: number = 24 % this.cols ? 24 : 24 / this.cols ;
             for (const item of form) {
-                item.className = 'dynamic_form_item';
-                item.className = item.checkedFail ? item.className + ' checkedFail' : item.className;
+                item.className = item.className || '';
                 item.props.groupName = item.groupName;
+                item.emit = ['blur'];
+                item.emitPrefix = 'change';
                 if (this.hasSpan) {
                     item.col = {
                         span: span - 1,
@@ -149,9 +150,10 @@
                 if (item.type !== 'hidden') {
                     let rowspan: number = item.props && item.props.rowspan ? item.props.rowspan : 1;
                     rowspan = colNum === 1 ? colNum : rowspan;
-                    item.className = 'dynamic_form_item _updateWidth';
-                    item.className = item.checkedFail ? item.className + ' checkedFail' : item.className;
+                    item.className = item.className ? '_updateWidth ' + item.className : '_updateWidth';
                     item.props.groupName = item.groupName;
+                    item.emit = ['blur'];
+                    item.emitPrefix = 'change';
                     if (count === 0) {
                         rowObj = {
                             type: 'tr',
@@ -202,9 +204,10 @@
                     },
                 });
                 for (const item of form[key]) {
-                    item.className = 'dynamic_form_item';
-                    item.className = item.checkedFail ? item.className + ' checkedFail' : item.className;
+                    item.className = item.className || '';
                     item.props.groupName = item.groupName;
+                    item.emit = ['blur'];
+                    item.emitPrefix = 'change';
                     if (this.hasSpan) {
                         item.col = {
                             span: span - 1,
@@ -247,9 +250,10 @@
                     if (item.type === 'spaceAttr') {
                         elTabPaneObj.props.lazy = true;
                     }
-                    item.className = 'dynamic_form_item _tabs';
-                    item.className = item.checkedFail ? item.className + ' checkedFail' : item.className;
+                    item.className = item.className ? '_tabs ' + item.className : '_tabs';
                     item.props.groupName = item.groupName;
+                    item.emit = ['blur'];
+                    item.emitPrefix = 'change';
                     if (this.hasSpan) {
                         item.col = {
                             span: span - 1,
@@ -356,7 +360,7 @@
 
         // 表单值 -【失去焦点】触发
         private blur(inject: any) {
-            /*const data: any = {};
+            const data: any = {};
             const rule: any = inject.self;
             const field: string = rule.field;
             let value: any = inject.self.value;
@@ -372,7 +376,7 @@
             const bType: string = rule.bType;
             if (!!value && !!bType) {
                 this.changeRelate(bType, value);
-            }*/
+            }
             this.$emit('blur', inject);
         }
 
@@ -490,7 +494,7 @@
    .dynamic-table{
       text-align: left;
 
-      & .dynamic_form_item {
+      & .el-form-item {
          .el-form-item__label {
             /* 单行居中，最多显示两行，超过两行文本溢出 */
             position: relative;
@@ -543,10 +547,45 @@
 
          & .el-form-item__content {
             & > div {
-               width: 100%;
+               width: 100% !important;
+            }
+
+            /*单选框，复选框样式修改  边框宽度*/
+            & > .el-radio-group, & > .el-checkbox-group {
+               width: calc(100% - 7px)!important;
             }
          }
 
+         /*单选框，复选框样式修改*/
+         .el-form-item__content > .el-radio-group,
+         .el-form-item__content > .el-checkbox-group {
+            line-height: initial;
+            padding: 9px 0 9px 5px;
+            border-radius: 4px;
+            border: 1px solid #DCDFE6;
+
+            &[type='button'] {
+               border: 0;
+               padding: initial;
+            }
+
+            &:hover {
+               border-color: #C0C4CC;
+            }
+
+            &:focus {
+               border-color: #F56C6C;
+            }
+         }
+
+         &.is-error {
+            .el-form-item__content > .el-radio-group,
+            .el-form-item__content > .el-radio-group:focus,
+            .el-form-item__content > .el-checkbox-group,
+            .el-form-item__content > .el-checkbox-group:focus {
+               border-color: #F56C6C;
+            }
+         }
       }
 
       & .__item--info {
@@ -584,9 +623,5 @@
             padding: 2px;
          }
       }
-
-
-      /*单选框，复选框样式修改*/
-
    }
 </style>

@@ -1,0 +1,566 @@
+[
+  {
+    "type": "hidden",
+    "title": "隐藏字段",
+    "key": "hidden",
+    "field": "hidden",
+    "props": {},
+    "validates": []
+  },
+  {
+    "type": "input",
+    "title": "输入框",
+    "key": "input",
+    "field": "input",
+    "props": {
+      "type": "text",
+      "placeholder": "请输入",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "input",
+    "title": "文本框",
+    "key": "input_textarea",
+    "field": "input_textarea",
+    "props": {
+      "type": "textarea",
+      "placeholder": "请输入",
+      "rows": 5,
+      "show-word-limit": true,
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "inputNumber",
+    "title": "右数字框",
+    "key": "inputNumber",
+    "field": "inputNumber",
+    "props": {
+      "controls-position": "right",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "inputNumber",
+    "title": "中数字框",
+    "key": "inputNumber_center",
+    "field": "inputNumber_center",
+    "props": {
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "radio",
+    "title": "单选框",
+    "key": "radio",
+    "field": "radio",
+    "props": {
+      "size": "small",
+      "vertical": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "radio",
+    "title": "单选按钮",
+    "key": "radio_button",
+    "field": "radio_button",
+    "props": {
+      "type": "button",
+      "size": "small",
+      "vertical": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "checkbox",
+    "title": "复选框",
+    "key": "checkbox",
+    "field": "checkbox",
+    "props": {
+      "size": "small",
+      "clearable": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "checkbox",
+    "title": "复选按钮",
+    "key": "checkbox_button",
+    "field": "checkbox_button",
+    "props": {
+      "type": "button",
+      "size": "small",
+      "clearable": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "select",
+    "title": "下拉框",
+    "key": "select",
+    "field": "select",
+    "props": {
+      "multiple": false,
+      "placeholder": "请选择",
+      "not-found-text": "无匹配数据",
+      "placement": "bottom",
+      "clearable": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "select",
+    "title": "下拉多选框",
+    "key": "select_multiple",
+    "field": "select_multiple",
+    "props": {
+      "multiple": true,
+      "placeholder": "请选择",
+      "not-found-text": "无匹配数据",
+      "placement": "bottom",
+      "clearable": true,
+      "options": [
+        {"label": "水库", "value": "44D01"},
+        {"label": "河道", "value": "44D02"},
+        {"label": "地下水", "value": "44D03"}
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "switch",
+    "title": "开关",
+    "key": "switch",
+    "field": "switch",
+    "props": {
+      "disabled": false,
+      "size": "small",
+      "activeValue": "1",
+      "inactiveValue": "0"
+    },
+    "validates": []
+  },
+  {
+    "type": "slider",
+    "title": "滑块",
+    "key": "slider",
+    "field": "slider",
+    "props": {
+      "min": 0,
+      "max": 100,
+      "range": false,
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "slider",
+    "title": "分段滑块",
+    "key": "slider_step",
+    "field": "slider_step",
+    "props": {
+      "min": 0,
+      "max": 100,
+      "show-stops": true,
+      "step": 10,
+      "range": false,
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "rate",
+    "title": "比率",
+    "key": "rate",
+    "field": "rate",
+    "props": {
+      "count": 10,
+      "allowHalf": false,
+      "show-text": false,
+      "clearable": false,
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "colorPicker",
+    "title": "颜色选择器",
+    "key": "colorPicker",
+    "field": "colorPicker",
+    "props": {
+      "disabled": false,
+      "editable": true,
+      "alpha": false,
+      "hue": true,
+      "recommend": false,
+      "format": "rgb",
+      "size": "large"
+    },
+    "validates": []
+  },
+  {
+    "type": "datePicker",
+    "title": "日期选择器",
+    "key": "datePicker",
+    "field": "datePicker",
+    "props": {
+      "type": "date",
+      "placeholder": "请选择日期",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "datePicker",
+    "title": "年份选择器",
+    "key": "datePicker_year",
+    "field": "datePicker_year",
+    "props": {
+      "type": "year",
+      "placeholder": "请选择年份",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "datePicker",
+    "title": "日期时间选择器",
+    "key": "datePicker_datetime",
+    "field": "datePicker_datetime",
+    "props": {
+      "type": "datetime",
+      "placeholder": "请选择日期",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "datePicker",
+    "title": "日期范围选择器",
+    "key": "datePicker_daterange",
+    "field": "datePicker_daterange",
+    "props": {
+      "type": "daterange",
+      "start-placeholder": "起始日期",
+      "end-placeholder": "终止日期",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "timePicker",
+    "title": "时间选择器",
+    "key": "timePicker",
+    "field": "timePicker",
+    "props": {
+      "placeholder": "请选择时间",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "timePicker",
+    "title": "时间范围选择器",
+    "key": "timePicker_range",
+    "field": "timePicker_range",
+    "props": {
+      "isRange": true,
+      "start-placeholder": "起始时间",
+      "end-placeholder": "终止时间",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "cascader",
+    "title": "多级联动",
+    "key": "cascader",
+    "field": "cascader",
+    "props": {
+      "show-all-levels": false,
+      "props": {
+        "checkStrictly": true
+      },
+      "options": [
+        {
+          "label": "自然灾害风险区",
+          "value": "100100000000",
+          "children": [
+            {
+              "label": "水旱灾害风险区",
+              "value": "100101000000",
+              "children": [
+                {"label": "洪泛区", "value": "100101010000"},
+                {"label": "蓄滞洪区", "value": "100101020000"},
+                {"label": "防洪保护区","value": "100101030000"}
+              ]
+            },
+            {
+              "label": "气象灾害风险区",
+              "value": "100102000000",
+              "children":
+              [
+                {"label": "台风灾害风险区","value": "100102010000"},
+                {"label": "龙卷风灾害风险区","value": "100102020000"},
+                {"label": "暴雨灾害风险区","value": "100102030000"}
+              ]
+            },
+            {
+              "label": "地质灾害风险区",
+              "value": "100103000000",
+              "children":
+              [
+                {"label": "滑坡区","value": "100103010000"},
+                {"label": "泥石流区","value": "100103020000"},
+                {"label": "山体崩塌区","value": "100103030000"},
+                {"label": "不稳定斜坡区","value": "100103040000"}
+              ]
+            }
+          ]
+        }
+      ],
+      "clearable": true,
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcTreeSelect",
+    "title": "下拉选择树",
+    "key": "fcTreeSelect",
+    "field": "fcTreeSelect",
+    "props": {
+      "placeholder": "请选择",
+      "clearable": true,
+      "options": [
+        {
+          "label": "自然灾害风险区",
+          "id": "100100000000",
+          "children": [
+            {
+              "label": "水旱灾害风险区",
+              "id": "100101000000",
+              "children": [
+                {"label": "洪泛区", "id": "100101010000"},
+                {"label": "蓄滞洪区", "id": "100101020000"},
+                {"label": "防洪保护区","id": "100101030000"}
+              ]
+            },
+            {
+              "label": "气象灾害风险区",
+              "id": "100102000000",
+              "children":
+              [
+                {"label": "台风灾害风险区","id": "100102010000"},
+                {"label": "龙卷风灾害风险区","id": "100102020000"},
+                {"label": "暴雨灾害风险区","id": "100102030000"}
+              ]
+            },
+            {
+              "label": "地质灾害风险区",
+              "id": "100103000000",
+              "children":
+              [
+                {"label": "滑坡区","id": "100103010000"},
+                {"label": "泥石流区","id": "100103020000"},
+                {"label": "山体崩塌区","id": "100103030000"},
+                {"label": "不稳定斜坡区","id": "100103040000"}
+              ]
+            }
+          ]
+        }
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcTabTreeSelect",
+    "title": "多标签选择树",
+    "key": "fcTabTreeSelect",
+    "field": "fcTabTreeSelect",
+    "props": {
+      "placeholder": "请选择",
+      "clearable": true,
+      "options": [
+        {
+          "label": "常用",
+          "value": "",
+          "children": [
+            {"label": "水旱灾害风险区","value": "100101000000"},
+            {"label": "气象灾害风险区","value": "100101000001"},
+            {"label": "地质灾害风险区","value": "100101000002"}
+          ]
+        },
+        {
+          "label": "全部",
+          "value": "",
+          "children": [
+            {
+              "label": "水旱灾害风险区",
+              "value": "100101000000",
+              "children": [
+                {"label": "洪泛区","value": "100101010000"},
+                {"label": "蓄滞洪区","value": "100101020000"},
+                {"label": "防洪保护区","value": "100101030000"}
+              ]
+            }
+          ]
+        }
+      ],
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "历史日期限选",
+    "key": "fcDatePickerLimit",
+    "field": "fcDatePickerLimit",
+    "props": {
+      "type": "date",
+      "placeholder": "请选择日期",
+      "limitType": "history",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "未来日期限选",
+    "key": "fcDatePickerLimit_future",
+    "field": "fcDatePickerLimit_future",
+    "props": {
+      "type": "date",
+      "placeholder": "请选择日期",
+      "limitType": "future",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "历史年份限选",
+    "key": "fcDatePickerLimit_year",
+    "field": "fcDatePickerLimit_year",
+    "props": {
+      "type": "year",
+      "placeholder": "请选择年份",
+      "limitType": "history",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "未来年份限选",
+    "key": "fcDatePickerLimit_year_future",
+    "field": "fcDatePickerLimit_year_future",
+    "props": {
+      "type": "year",
+      "placeholder": "请选择年份",
+      "limitType": "future",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "历史日期时间限选",
+    "key": "fcDatePickerLimit_datetime",
+    "field": "fcDatePickerLimit_datetime",
+    "props": {
+      "type": "datetime",
+      "placeholder": "请选择日期",
+      "limitType": "history",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "未来日期时间限选",
+    "key": "fcDatePickerLimit_datetime_future",
+    "field": "fcDatePickerLimit_datetime_future",
+    "props": {
+      "type": "datetime",
+      "placeholder": "请选择日期",
+      "limitType": "future",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "历史日期范围限选",
+    "key": "fcDatePickerLimit_daterange",
+    "field": "fcDatePickerLimit_daterange",
+    "props": {
+      "type": "daterange",
+      "start-placeholder": "起始日期",
+      "end-placeholder": "终止日期",
+      "limitType": "history",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  },
+  {
+    "type": "fcDatePickerLimit",
+    "title": "未来日期范围限选",
+    "key": "fcDatePickerLimit_daterange_future",
+    "field": "fcDatePickerLimit_daterange_future",
+    "props": {
+      "type": "daterange",
+      "start-placeholder": "起始日期",
+      "end-placeholder": "终止日期",
+      "limitType": "future",
+      "limitDate": "2020-11-28",
+      "disabled": false
+    },
+    "validates": []
+  }
+]
