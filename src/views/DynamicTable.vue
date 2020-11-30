@@ -2,7 +2,7 @@
   <div class="home">
     <FcDynamicTable ref="dynamicTable"
                     :formRule="formRule"
-                    layoutType="2"
+                    layoutType="1"
                     :cols="cols"
                     @blur="blur"
                     @changeForm="changeForm"></FcDynamicTable>
@@ -29,9 +29,7 @@
     })
     export default class DynamicTable extends Vue {
         @Prop() private msg!: string;
-
-        private layoutType: number = 0;
-        private cols: number = 2;
+        private cols: number = 3;
         private formRule: any[] = require('../../public/formTypeTest.json');
             /*[
             {
@@ -138,7 +136,7 @@
         ];*/
 
         private changeForm(data: any) {
-            // console.log(data);
+            console.log('change', data);
         }
 
         private blur(data: any) {

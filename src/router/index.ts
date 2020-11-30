@@ -21,11 +21,11 @@ const routes: RouteConfig[] = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     },
-    {
-        path: '/formCreate',
-        name: 'DynamicTable',
-        component: () => import(/* webpackChunkName: "about" */ '../views/DynamicTable.vue'),
-    },
+    // {
+    //     path: '/formCreate',
+    //     name: 'DynamicTable',
+    //     component: () => import(/* webpackChunkName: "about" */ '../views/DynamicTable.vue'),
+    // },
     {
         path: '/pureTable',
         name: 'PureTable',
@@ -36,11 +36,11 @@ const routes: RouteConfig[] = [
         name: 'ELDTable',
         component: () => import(/* webpackChunkName: "about" */ '../views/ELDTable.vue'),
     },
-    // {
-    //     path: '/dcms',
-    //     name: 'Dcms',
-    //     component: Dcms,
-    // },
+    {
+        path: '/dcms',
+        name: 'Dcms',
+        component: Dcms,
+    },
     {
         path: '/gvComp',
         name: 'GvComp',

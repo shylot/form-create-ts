@@ -8,7 +8,7 @@
 
 <script lang="ts">
     import {Component, Emit, Prop, Watch, Vue} from 'vue-property-decorator';
-    import {IRule, IForm} from 'dcms-ui/types/iformGenerate'
+    import {IRule, IForm} from 'dcms-ui/types/iformGenerate';
 
     @Component({
         name: 'UseFormGenerate',

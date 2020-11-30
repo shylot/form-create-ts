@@ -1,5 +1,9 @@
 <template>
     <div class="dcms">
+        <h3>表单生成器 - FormGenerate</h3>
+        <UseFormGenerate></UseFormGenerate>
+        <br/>
+
         <h3>下拉树选择 - FcTreeSelect</h3>
         <!--<FcTreeSelect :options="options"></FcTreeSelect>-->
         <br/>
@@ -13,13 +17,13 @@
         <br/>
 
         <h3>动态表单 - DynamicTable</h3>
-        <DynamicTable
-                ref="dynamicTable"
-                :formRule="formRule"
-                :layoutType="layoutType"
-                :cols="cols"
-                @changeForm="changeForm">
-        </DynamicTable>
+        <!--<DynamicTable-->
+                <!--ref="dynamicTable"-->
+                <!--:formRule="formRule"-->
+                <!--:layoutType="layoutType"-->
+                <!--:cols="cols"-->
+                <!--@changeForm="changeForm">-->
+        <!--</DynamicTable>-->
         <br/>
 
     </div>
@@ -27,6 +31,7 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
+    import UseFormGenerate from '../components/dcms/UseFormGenerate.vue';            // 组件按需加载
 
     /*下拉选择树*/
     // import FcTreeSelect from 'dcms-ui/packages/fcTreeSelect';            // 组件按需加载
@@ -40,6 +45,7 @@
 
 
     @Component({
+        components: {UseFormGenerate}
         // components: {DynamicTable, FcTabTreeSelect, FcTreeSelect, FcDatePickerLimit},
     })
     export default class Dcms extends Vue {
@@ -127,7 +133,7 @@
                 value: null,
             },
             {
-                type: 'radio',
+                type: 'checkbox',
                 title: '单选框',
                 field: 'radio',
                 options: [
@@ -137,7 +143,7 @@
                     {label: '存储器存储器存储器', value: 'storage'},
                 ],
                 props: {
-                    type: 'button',
+                    // type: 'button',
                 },
             },
             {
