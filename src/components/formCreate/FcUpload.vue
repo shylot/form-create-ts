@@ -6,30 +6,64 @@
     import {Component, Prop, Vue} from 'vue-property-decorator';
 
     @Component
-    export default class Upload extends Vue {
+    export default class FcUpload extends Vue {
         private fApi: any = {};
         private option: any = {};
         private rule: any[] = [
             {
-                type: 'upload',
-                field: 'pic',
-                title: '轮播图',
-                value: [
-                    '/local/pic/尔雅.jpeg',
-                    'http://img1.touxiang.cn/uploads/20131030/30-075657_191.jpg',
+                type: 'row',
+                children: [
+                    {
+                        type: 'input',
+                        field: 'input',
+                        title: '输入框',
+                        children: [
+                            {
+                                type: 'span',
+                                slot: 'suffix',
+                                children: [
+                                    '个',
+                                ],
+                            },
+                        ],
+                        props: {
+                            type: 'text',
+                            labelWidth: '152px',
+                            placeholderpe: '请输入',
+                        },
+                        validate: {
+                            required: true,
+                        },
+                    },
+                    {
+                        type: 'input',
+                        field: 'input_textarea',
+                        title: '文本框',
+                        props: {
+                            'type': 'textarea',
+                            'placeholder': '请输入',
+                            'labelWidth': '152px',
+                            'rows': 4,
+                            'rowspan': 1,
+                            'maxlength': 20,
+                            'show-word-limit': true,
+                        },
+                    },
+                    {
+                        type: 'inputNumber',
+                        field: 'inputNumber',
+                        title: '数字',
+                        props: {
+                            'labelWidth': '152px',
+                            'controls-position': 'right',
+                        },
+                    },
                 ],
                 props: {
-                    type: 'select',
-                    uploadType: 'image',
-                    action: '/local/pic/',
-                    // 'auto-upload': false,
-                    name: 'pic',
-                    multiple: true,
-                    accept: 'image\/*',
-                    // limit: 2,
-                    onSuccess(res: any, file: any) {
-                        file.url = res.data.filePath;
-                    },
+                    gutter: 10,
+                    type: 'flex',
+                    justify: 'space-between',
+                    align: 'middle',
                 },
             },
         ];

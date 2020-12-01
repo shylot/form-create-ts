@@ -25,19 +25,19 @@
         };
         private list: IRule[] = require('../../../public/formGenerateRules.json');
 
-        private created() {
+        /*private created() {
             console.log(this.list);
             this.form.list = this.list;
-        }
+        }*/
 
 
-        private changeRelate(data: any) {
+       /* private changeRelate(data: any) {
             console.log(data);
-        }
+        }*/
 
-        private changeForm(data: any) {
+        /*private changeForm(data: any) {
             console.log(data);
-        }
+        }*/
 
     }
 </script>

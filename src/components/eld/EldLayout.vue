@@ -37,8 +37,15 @@
                 <div class="eldLayout-items-name">row flex</div>
                 <div class="eldLayout-items-value">
                     <div class="eldLayout_opt">
+                        <el-switch
+                                v-model="displayRaster"
+                                active-color="#13ce66"
+                                inactive-color="#ff4949"
+                                active-value="flex"
+                                active-text="flex">
+                        </el-switch>
                         <div>justify
-                            <el-select v-model="justifyRaster" placeholder="请选择水平排列方式">
+                            <el-select v-model="justifyRaster" clearable placeholder="请选择水平排列方式">
                                 <el-option v-for="item of rasterOpt.justify"
                                            :key="item.value"
                                            :label="item.name"
@@ -48,7 +55,7 @@
                         </div>
                         <div>
                             align
-                            <el-select v-model="alignRaster" placeholder="请选择垂直排列方式">
+                            <el-select v-model="alignRaster" clearable placeholder="请选择垂直排列方式">
                                 <el-option v-for="item of rasterOpt.align"
                                            :key="item.value"
                                            :label="item.name"
@@ -57,10 +64,10 @@
                             </el-select>
                         </div>
                     </div>
-                    <el-row type="flex" :justify="justifyRaster" :align="alignRaster" style="height: 80px; background-color: rgba(0, 255, 0, 0.3)">
+                    <el-row :gutter="10" :type="displayRaster" :justify="justifyRaster" :align="alignRaster" style="height: 80px; background-color: rgba(0, 255, 0, 0.3)">
                         <el-col :span="1"><div class="item">1</div></el-col>
-                        <el-col :span="1"><div class="item">1</div></el-col>
-                        <el-col :span="1"><div class="item">1</div></el-col>
+                        <el-col :span="12"><div class="item">12</div></el-col>
+                        <el-col :span="12"><div class="item">12</div></el-col>
                     </el-row>
 
                 </div>
@@ -142,8 +149,9 @@
 
         private layout: string = '栅格';
 
-        private justifyRaster: string = '';
-        private alignRaster: string = '';
+        private displayRaster: string = 'flex';
+        private justifyRaster: string = 'space-between';
+        private alignRaster: string = 'middle';
         private rasterOpt: any = {
             justify: [
                 {name: '起始位置', value: 'start'},
@@ -214,12 +222,13 @@
                 width: 90%;
             }
             .item {
-                height: 40px;
-                line-height: 40px;
+                height: 38px;
+                line-height: 38px;
                 text-align: center;
                 color: mediumblue;
                 font-weight: bold;
                 background-color: rgba(255, 194, 205, 0.5);
+                border: 1px solid rgba(255, 194, 205, 0.7);
             }
         }
 

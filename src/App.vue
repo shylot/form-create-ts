@@ -5,8 +5,8 @@
       <router-link to="/pureTable">纯前端</router-link> |
       <router-link to="/eLDTable">El表单</router-link> |
       <router-link to="/about">About</router-link> |
-      <!--<router-link to="/formCreate">formCreate</router-link> |-->
-      <router-link to="/dcms">dcms</router-link> |
+      <router-link to="/formCreate">formCreate</router-link> |
+      <!--<router-link to="/dcms">dcms</router-link> |-->
       <router-link to="/treeSelect">treeSelect</router-link> |
     </div>
     <div class="content">

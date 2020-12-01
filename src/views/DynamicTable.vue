@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <FcDynamicTable ref="dynamicTable"
-                    :formRule="formRule"
-                    layoutType="1"
-                    :cols="cols"
-                    @blur="blur"
-                    @changeForm="changeForm"></FcDynamicTable>
+    <!--<FcDynamicTable ref="dynamicTable"-->
+                    <!--:formRule="formRule"-->
+                    <!--layoutType="0"-->
+                    <!--:cols="cols"-->
+                    <!--@blur="blur"-->
+                    <!--@changeForm="changeForm"></FcDynamicTable>-->
     <!--<fc-pop-info ref="dom"></fc-pop-info>-->
-    <!--<fc-upload></fc-upload>-->
+    <fc-upload></fc-upload>
     <!--<fc-group></fc-group>-->
   </div>
 </template>
@@ -135,13 +135,13 @@
             },
         ];*/
 
-        private changeForm(data: any) {
-            console.log('change', data);
-        }
+        // private changeForm(data: any) {
+        //     console.log('change', data);
+        // }
 
-        private blur(data: any) {
-            console.log('blur', data);
-        }
+        // private blur(data: any) {
+        //     console.log('blur', data);
+        // }
 
         private mounted() {
             const dom: any = this.$refs.dom;

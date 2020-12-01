@@ -45,7 +45,7 @@
 
 
     @Component({
-        components: {UseFormGenerate}
+        components: {UseFormGenerate},
         // components: {DynamicTable, FcTabTreeSelect, FcTreeSelect, FcDatePickerLimit},
     })
     export default class Dcms extends Vue {

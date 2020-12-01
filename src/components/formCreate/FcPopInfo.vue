@@ -161,14 +161,14 @@
             },
         ];
 
-        private blurForm(inject: any) {
+       /* private blurForm(inject: any) {
             const value: any = inject.self.value;
             console.log(value);
-        }
+        }*/
 
-        private change(a: any, b: any, c: any) {
+        /*private change(a: any, b: any, c: any) {
             // console.log(a, b, c);
-        }
+        }*/
     }
 </script>
 
