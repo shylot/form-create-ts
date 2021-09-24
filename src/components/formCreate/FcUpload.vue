@@ -13,10 +13,9 @@
                 labelWidth: '125px',
                 labelPosition: 'left',
             },
-            global:{
-                //设置所有组件
-                '*':{
-                    col:{
+            global: {
+                '*': { // 设置所有组件
+                    col: {
                         labelWidth: '125px',
                     },
                 },
@@ -103,7 +102,6 @@
 
         private change(a: any, b: any, c: any) {
             const rule: any = c.getRule(a);
-            console.log({a, b, rule});
         }
     }
 </script>

@@ -26,14 +26,14 @@
     export default class App extends Vue {
 
         private chooseImage() {
-            alert('hello')
+            alert('hello');
             gsmdp.chooseImage({
                 key: {
                     count: 9,
                 },
-                success(res) {
-                    alert(res)
-                }
+                success(res: any) {
+                    alert(res);
+                },
             });
         }
     }

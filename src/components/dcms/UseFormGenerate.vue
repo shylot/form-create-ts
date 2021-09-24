@@ -33,11 +33,11 @@
 
 
         private changeRelate(data: any) {
-            console.log(data);
+            // console.log(data);
         }
 
         private changeForm(data: any) {
-            console.log(data);
+            // console.log(data);
         }
 
     }
