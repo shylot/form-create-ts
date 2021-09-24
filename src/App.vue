@@ -1,20 +1,43 @@
 <template>
   <div id="app">
     <div class="nav">
-      <router-link to="/">Home</router-link> |
+      <el-button @click="chooseImage">选择图片</el-button>
+      <!--<router-link to="/">Home</router-link> |
       <router-link to="/pureTable">纯前端</router-link> |
       <router-link to="/eLDTable">El表单</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/formCreate">formCreate</router-link> |
-      <!--<router-link to="/dcms">dcms</router-link> |-->
-      <router-link to="/treeSelect">treeSelect</router-link> |
+      <router-link to="/dcms">dcms</router-link> |
+      <router-link to="/treeSelect">treeSelect</router-link> |-->
     </div>
-    <div class="content">
+   <!-- <div class="content">
       <router-view/>
-    </div>
+    </div>-->
   </div>
 </template>
+<script lang="ts">
+    import {Component, Prop, Vue} from 'vue-property-decorator';
+    import {gsmdp} from '@gsafety/jssdk/dist/gsmdp';
 
+    @Component({
+        name: 'App',
+        components: {},
+    })
+    export default class App extends Vue {
+
+        private chooseImage() {
+            alert('hello')
+            gsmdp.chooseImage({
+                key: {
+                    count: 9,
+                },
+                success(res) {
+                    alert(res)
+                }
+            });
+        }
+    }
+</script>
 <style lang="less">
 
   html, body {
@@ -52,7 +75,8 @@
   }
 
   .content {
-    height: calc(100% - 90px);
+    height: calc(100% - 110px);
+    padding-top: 20px;
 
     & > div {
       height: 100%;

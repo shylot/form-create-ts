@@ -7,7 +7,7 @@ const baseUrl = process.env.NODE_ENV === 'production' ? '/dist' : '/';
 module.exports = {
     publicPath: baseUrl,
     devServer: {
-        host: 'localhost',
+        host: '192.168.2.186',
         port: 8081,
         proxy: {  //配置跨域
             '/local': {

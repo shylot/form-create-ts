@@ -65,9 +65,9 @@
                         </div>
                     </div>
                     <el-row :gutter="10" :type="displayRaster" :justify="justifyRaster" :align="alignRaster" style="height: 80px; background-color: rgba(0, 255, 0, 0.3)">
-                        <el-col :span="1"><div class="item">1</div></el-col>
-                        <el-col :span="12"><div class="item">12</div></el-col>
-                        <el-col :span="12"><div class="item">12</div></el-col>
+                        <el-col :span="10"><div class="item">20</div></el-col>
+                        <el-col :span="10"><div class="item">20</div></el-col>
+                        <el-col :span="20"><div class="item">20</div></el-col>
                     </el-row>
 
                 </div>

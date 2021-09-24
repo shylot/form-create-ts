@@ -16,14 +16,14 @@
     })
     export default class UseFormGenerate extends Vue {
 
-        private form: IForm = {
+        private form: IForm = require('../../../public/formGenerateRules.json');
+        /*private form: IForm = {
             list: [],
             config: {
                 labelWidth: 100,
                 labelPosition: 'right',
             },
-        };
-        private list: IRule[] = require('../../../public/formGenerateRules.json');
+        };*/
 
         /*private created() {
             console.log(this.list);
@@ -31,13 +31,14 @@
         }*/
 
 
-       /* private changeRelate(data: any) {
-            console.log(data);
-        }*/
 
-        /*private changeForm(data: any) {
+        private changeRelate(data: any) {
             console.log(data);
-        }*/
+        }
+
+        private changeForm(data: any) {
+            console.log(data);
+        }
 
     }
 </script>
